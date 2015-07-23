@@ -19,6 +19,18 @@ if (
 	}
 }
 
+if (
+	fw()->extensions->get('megamenu')->show_button()
+	&&
+	($button = fw_ext_mega_menu_get_meta($item, 'button'))
+) {
+	if (empty($attributes['class'])) {
+		$attributes['class'] = 'button button-sm';
+	} else {
+		$attributes['class'] .= ' button button-sm';
+	}
+}
+
 echo $args->before;
 echo fw_html_tag('a', $attributes, $args->link_before . $title . $args->link_after);
 echo $args->after;

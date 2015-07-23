@@ -22,6 +22,15 @@ class FW_Extension_Megamenu extends FW_Extension
 	}
 
 	/**
+	 * Check if menu button is enabled (checked in Screen Options on admin Menus page)
+	 * @return bool
+	 */
+	public function show_button()
+	{
+		return !in_array('button', (array) get_user_option('manage' . 'nav-menus' . 'columnshidden'));
+	}
+
+	/**
 	 * @internal
 	 */
 	public function _init()
@@ -106,6 +115,7 @@ class FW_Extension_Megamenu extends FW_Extension
 	public function _admin_filter_manage_nav_menus_columns($columns)
 	{
 		$columns['icon'] = __('Icon', 'fw');
+		$columns['button'] = __('Button', 'fw');
 
 		return $columns;
 	}
