@@ -201,7 +201,7 @@ class FW_Ext_Mega_Menu_Admin_Walker extends Walker_Nav_Menu /* Walker_Nav_Menu_E
 <?php # Button ?>
 				<p class="field-mega-menu-button description description-wide empty show-if-screen-options-button">
 					<label>
-						<input type="checkbox" name="<?php echo _fw_ext_mega_menu_admin_input_name($item, 'button') ?>" <?php checked(fw_ext_mega_menu_get_meta($item, 'button')) ?> class="mega-menu-button" />
+						<input type="checkbox" name="<?php echo _fw_ext_mega_menu_admin_input_name($item, 'button') ?>" <?php echo fw_ext_mega_menu_get_meta($item, 'button') == 'on' ? 'checked' : ''; ?> class="mega-menu-button" />
 						<?php _e('Show as button', 'fw') ?>
 					</label>
 				</p>

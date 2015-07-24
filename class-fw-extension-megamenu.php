@@ -91,7 +91,7 @@ class FW_Extension_Megamenu extends FW_Extension
 	 */
 	public function _admin_action_wp_update_nav_menu_item($menu_id, $menu_item_db_id, $args)
 	{
-		$flags = array('enabled', 'title-off', 'new-row');
+		$flags = array('enabled', 'title-off', 'new-row', 'button');
 
 		$meta = _fw_ext_mega_menu_admin_input_POST_values($menu_item_db_id);
 		foreach ($flags as $flag) {
