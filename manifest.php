@@ -10,4 +10,4 @@ $manifest['version'] = '1.0.5';
 $manifest['display'] = true;
 $manifest['standalone'] = true;
 
-$manifest['github_update'] = 'ThemeFuse/Unyson-MegaMenu-Extension';
+$manifest['github_update'] = 'ExtPoint/Unyson-MegaMenu-Extension';
